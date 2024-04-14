@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "545c00fb-dc45-4eac-ab30-af004895c4ec",
+		"name": "Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33036760"
+	},
+	"item": [
+		{
+			"name": "User/Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"usertest2\",\r\n  \"firstName\": \"Test2\",\r\n  \"lastName\": \"Test2\",\r\n  \"email\": \"test2@gmail.com\",\r\n  \"password\": \"pasS.1\",\r\n  \"rePassword\": \"pasS.1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/User/Register",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test2@gmail.com\",\r\n  \"password\": \"pasS.1\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/User/Authentication",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"User",
+						"Authentication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie/Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIwMTMwY2YxOS0wYmZlLTQxNDUtYjliYy00MjdjNThhZDZlY2MiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MjA6NDggQU0iLCJVc2VySWQiOiJiOWViNjgwMi1iMjIwLTRlZDQtMWMyYS0wOGRjNWM0NzliNGUiLCJFbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoidXNlcnRlc3QyIiwiZXhwIjoxNzEzMTExNjQ4LCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.9FjaOdgFj_3JIMtAEypHulRboXUcI1CgCqrVle47Bjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"postman test \",\r\n  \"description\": \"Postman test\",\r\n  \"posterUrl\": \"\",\r\n  \"trailerLink\": \"\",\r\n  \"isWatched\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Create",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog/All",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIwMTMwY2YxOS0wYmZlLTQxNDUtYjliYy00MjdjNThhZDZlY2MiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MjA6NDggQU0iLCJVc2VySWQiOiJiOWViNjgwMi1iMjIwLTRlZDQtMWMyYS0wOGRjNWM0NzliNGUiLCJFbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoidXNlcnRlc3QyIiwiZXhwIjoxNzEzMTExNjQ4LCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.9FjaOdgFj_3JIMtAEypHulRboXUcI1CgCqrVle47Bjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Catalog/All",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Catalog",
+						"All"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie/Edit?movieId=70cd0473-9dd5-428d-9c06-08dc5c49d907",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIwMTMwY2YxOS0wYmZlLTQxNDUtYjliYy00MjdjNThhZDZlY2MiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MjA6NDggQU0iLCJVc2VySWQiOiJiOWViNjgwMi1iMjIwLTRlZDQtMWMyYS0wOGRjNWM0NzliNGUiLCJFbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoidXNlcnRlc3QyIiwiZXhwIjoxNzEzMTExNjQ4LCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.9FjaOdgFj_3JIMtAEypHulRboXUcI1CgCqrVle47Bjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \t\"title\": \"New\",\r\n  \t\"description\": \"New\",\r\n  \t\"posterUrl\": \"\",\r\n  \t\"trailerLink\": \"\",\r\n  \t\"isWatched\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Edit?movieId=70cd0473-9dd5-428d-9c06-08dc5c49d907",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "70cd0473-9dd5-428d-9c06-08dc5c49d907"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movie/Delete?movieId=70cd0473-9dd5-428d-9c06-08dc5c49d907",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIwMTMwY2YxOS0wYmZlLTQxNDUtYjliYy00MjdjNThhZDZlY2MiLCJpYXQiOiI0LzE0LzIwMjQgMTA6MjA6NDggQU0iLCJVc2VySWQiOiJiOWViNjgwMi1iMjIwLTRlZDQtMWMyYS0wOGRjNWM0NzliNGUiLCJFbWFpbCI6InRlc3QyQGdtYWlsLmNvbSIsIlVzZXJOYW1lIjoidXNlcnRlc3QyIiwiZXhwIjoxNzEzMTExNjQ4LCJpc3MiOiJNb3ZpZUNhdGFsb2dfQXBwX1NvZnRVbmkiLCJhdWQiOiJNb3ZpZUNhdGFsb2dfV2ViQVBJX1NvZnRVbmkifQ.9FjaOdgFj_3JIMtAEypHulRboXUcI1CgCqrVle47Bjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/api/Movie/Delete?movieId=70cd0473-9dd5-428d-9c06-08dc5c49d907",
+					"protocol": "http",
+					"host": [
+						"moviecatalog-env",
+						"eba-ubyppecf",
+						"eu-north-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"api",
+						"Movie",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "movieId",
+							"value": "70cd0473-9dd5-428d-9c06-08dc5c49d907"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
